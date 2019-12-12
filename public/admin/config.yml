@@ -12,9 +12,16 @@ collections:
       editor:
           name: test
       preview: false
+      identifier_field: title
       fields:
-          # - {label: Title, name: title, widget: string}
-          # - {label: 'Publish Date', name: date, widget: datetime}
+          - { label: Title, name: title, widget: string }
+          - {
+                label: Type,
+                name: type,
+                widget: select,
+                options: ["Bedroom", "Livingroom", "Kitchen"],
+            }
+          - { label: "Publish Date", name: date, widget: datetime }
           # - {label: Description, name: description, widget: string}
           # - {label: Body, name: body, widget: markdown}
           # - {label: Gallery, name: galleryImages , widget: list , field: {label: Image, name: image, widget: image}}
@@ -40,8 +47,8 @@ collections:
                                         fields:
                                             [
                                                 {
-                                                    label: Price,
-                                                    name: price,
+                                                    label: "Tag Price",
+                                                    name: TagPrice,
                                                     widget: string,
                                                 },
                                                 {
